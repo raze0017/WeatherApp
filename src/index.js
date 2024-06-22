@@ -10,14 +10,14 @@ butt.addEventListener('click',()=>{
 buttOnClick();
 });
 
-function buttOnClick(){
-    fetch(`https://api.weatherapi.com/v1/current.json?key=d5240453a3674fb9819110327242006&q=`+search.value, {mods: 'cors'})
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(response){
-        console.log(response.current.condition.text);
-    });
+async function buttOnClick(){
+    try{
+    const response =await fetch(`https://api.weatherapi.com/v1/current.json?key=d5240453a3674fb9819110327242006&q=`+search.value, {mods: 'cors'})
+    const weatherData=await response.json();
+    console.log(weatherData.current.condition.text);
+    }catch(error){
+        alert('The information is not available! try again with a nearby city or verify the correct spelling', error);
+    }
 }  
 });   
  
