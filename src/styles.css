@@ -14,7 +14,6 @@ body {
 .mainItems{
     padding-top: 5%;
 
-
 }
 .card{
     display: grid;
@@ -40,6 +39,7 @@ body {
 .tempAndCond{
     align-items: flex-start;
 }
+
 @media (max-width: 768px) {
     .card {
         grid-template-columns: 1fr;
@@ -47,11 +47,25 @@ body {
     }
     .tempAndCond{
         align-items: center;
+        margin-bottom: 40px;
     }
 }
 
 .temp{
-    font-size: 5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 6em;
+    font-weight: 700;
+    color: rgb(86, 84, 84);
+}
+.cond{
+    font-size: 1.1em;
+
+}
+.medium-text {
+    font-size: 1.1em;
+}
+.light-text,.minText {
+    color: rgb(66, 62, 62);
 }
 .minimum,.maximum,.feelsLike{
     display: flex;
@@ -59,6 +73,12 @@ body {
     justify-content: space-evenly;
     padding: 10px;
     align-items: center;
+
+
+}
+.temptex{
+    font-weight: 700;
+    color: grey
 }
 .feels,.max{
     margin-top: 10px;
