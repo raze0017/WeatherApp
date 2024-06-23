@@ -26,3 +26,6 @@ p{
     justify-content: space-between;
     justify-items: flex-start;
 }
+.text{
+    font-weight: 500;
+}

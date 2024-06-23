@@ -1,6 +1,6 @@
-import './styles.css';
-import './iconstyles.css';
-import './addtional.css'
+import './css/styles.css';
+import './css/iconstyles.css';
+import './css/addtional.css'
 import { display } from './display';
 document.addEventListener('DOMContentLoaded',()=>{
 
@@ -40,7 +40,7 @@ async function buttOnClick(){
     minTemp.textContent = forecasted.forecast.forecastday[0].day.mintemp_c + "°";
     maxTemp.textContent = forecasted.forecast.forecastday[0].day.maxtemp_c + "°";
     feels.textContent=weatherData.current.feelslike_c+"°";
-    rain.textContent=weatherData.current.cloud+"%";
+    rain.textContent=forecasted.forecast.forecastday[0].day.daily_chance_of_rain+"%";
     wind.textContent=weatherData.current.wind_kph+"km/h";
     rise.textContent = forecasted.forecast.forecastday[0].astro.sunrise;
     set.textContent = forecasted.forecast.forecastday[0].astro.sunset;
