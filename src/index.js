@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log(weatherData);
             console.log(forecasted);
+
+
         } catch (error) {
             console.error('Error fetching data:', error);
             alert('The information is not available! Try again with a nearby city.');
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateWeatherUI(weatherData, forecasted) {
         img.src = weatherData.current.condition.icon;
-        temp.textContent = `${weatherData.current.temp_c}°C`;
+        temp.textContent = `${weatherData.current.temp_c}°c`;
         cond.textContent = weatherData.current.condition.text;
         minTemp.textContent = `${forecasted.forecast.forecastday[0].day.mintemp_c}°`;
         maxTemp.textContent = `${forecasted.forecast.forecastday[0].day.maxtemp_c}°`;
@@ -63,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         humidity.textContent = `${forecasted.current.humidity}%`;
         gust.textContent = `${weatherData.current.gust_kph} kph`;
     }
-
     // Initialize with default city or user's last searched location
     buttOnClick();
 });
