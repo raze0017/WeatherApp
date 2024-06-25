@@ -12,7 +12,6 @@ This web application fetches and displays current weather conditions, forecasts,
 ## Features
 
 - **Current Weather Display**: Shows current weather conditions including temperature, condition, wind speed, humidity, and more.
-- **Forecast**: Displays a 3-day weather forecast with minimum and maximum temperatures.
 - **Hourly Forecast**: Provides hourly weather forecasts for the next 8 hours.
 - **Temperature Units**: Toggle between Celsius and Fahrenheit for temperature display.
 - **City Search**: Allows users to search for weather information by city name with autocomplete suggestions based on WeatherAPI data.
