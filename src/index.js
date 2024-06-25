@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pressure = document.querySelector('.pressureIcon');
     const humidity = document.querySelector('.humidityIcon');
     const gust = document.querySelector('.gustIcon');
+    const hours=document.querySelectorAll('.hourlycard');
 
     butt.addEventListener('click', buttOnClick);
 
@@ -26,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const weatherData = await fetchWeatherData(search.value);
             const forecasted = await fetchForecastData(search.value);
-
-            updateWeatherUI(weatherData, forecasted);
+            const hourlyData=forecasted.forecast.forecastday[0].hour;
+            updateWeatherUI(weatherData, forecasted,hourlyData);
 
             console.log(weatherData);
             console.log(forecasted);
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
     }
 
-    function updateWeatherUI(weatherData, forecasted) {
+    function updateWeatherUI(weatherData, forecasted,hourlyData) {
         img.src = weatherData.current.condition.icon;
         temp.textContent = `${weatherData.current.temp_c}°c`;
         cond.textContent = weatherData.current.condition.text;
@@ -64,6 +65,39 @@ document.addEventListener('DOMContentLoaded', () => {
         pressure.textContent = `${weatherData.current.pressure_mb} mb`;
         humidity.textContent = `${forecasted.current.humidity}%`;
         gust.textContent = `${weatherData.current.gust_kph} kph`;
+
+
+        //hourly card updation
+        const now=new Date();
+        const currentHour=now.getHours();
+        console.log(currentHour);
+
+        for(let i=0;i<8;i++){
+            const hourIndex=(currentHour+i+1)%24;
+            const hourData=hourlyData[hourIndex];
+            
+            const time= new Date(hourData.time).getHours();;
+            const iconHour=hourData.condition.icon;
+            const tempHour=hourData.temp_c;
+            console.log(time,iconHour,tempHour);
+            
+            const hourElement=document.createElement('div');
+            hourElement.className='hour';
+            hourElement.textContent=`${time}:00`;
+
+            const iconElement=document.createElement('img');
+            iconElement.src=iconHour;
+            iconElement.alt=`weather`;
+
+            const tempElement=document.createElement('div');
+            tempElement.className='temp';
+
+
+            hours[i].innerHTML='';
+            hours[i].appendChild(hourElement);
+            hours[i].appendChild(iconElement);
+            hours[i].appendChild(tempElement);
+        }
     }
     // Initialize with default city or user's last searched location
     buttOnClick();
