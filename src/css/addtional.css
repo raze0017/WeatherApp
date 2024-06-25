@@ -81,3 +81,15 @@ p{
 .tempHourly{
     font-size: 8px;
 }
+#tempToggle{
+    font-size: 26px;
+    color: rgb(61, 61, 61);
+    font-family:monospace;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    justify-content: end;
+    margin-left: 50px
+}
