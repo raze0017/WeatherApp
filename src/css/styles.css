@@ -1,9 +1,9 @@
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: monospace;
     font-size: 18px;
     overflow-x: hidden;
     color: var(--text);
-    font-weight: 400;
+    font-weight: 500;
     background: #fafafa;
 }
 
@@ -55,7 +55,7 @@ body {
 
 .temp{
     font-family: "Poppins", sans-serif;
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 600;
     color: rgb(86, 84, 84);
 }
