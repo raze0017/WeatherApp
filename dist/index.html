@@ -8,8 +8,10 @@
 
 <link rel="icon" href="favicon.png"><script defer src="main.js"></script></head>
 <body>
+    <header>Weatherify</header>
     <section class="searchbar">
-        <input type="text" placeholder="Place" id="searchField" value="Kunnamkulam">
+        <input type="text" placeholder="Place" id="searchField" value="Kunnamkulam, India">
+
         <button class="butt"><a>
             <!-- Here's the inline SVG icon -->
             <svg class="svg-icon search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">A magnifying glass icon.</desc><g class="search-path" fill="none" stroke="#848F91"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
@@ -17,6 +19,10 @@
           <button id="tempToggle">°F</button>
 
     </section>
+        <div class="sug">
+            <ul id="suggestions"></ul>
+
+        </div>
     <section class="mainItems">
         <div class="card">
             <div class="basic icon">    <img src="#" class="icon" alt="image">
