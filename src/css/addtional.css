@@ -83,7 +83,7 @@ p{
 }
 #tempToggle{
     font-size: 26px;
-    color: rgb(61, 61, 61);
+    color: rgb(110, 110, 110);
     font-family:monospace;
     font-weight: 600;
     border: none;
@@ -124,11 +124,11 @@ p{
 }
 header{
     display: flex;
-    font-size: 4rem;
+    font-size: 6rem;
     align-items: center;
     padding-bottom: 20px;
     font-family: monospace;
-    color: grey;
+    color: rgb(83, 83, 83);
     justify-content: center;
     font-weight: 600;
 }
