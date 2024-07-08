@@ -1,6 +1,7 @@
 # Weather Application
 
 This web application fetches and displays current weather conditions, forecasts, and hourly data for cities using the WeatherAPI. It allows users to search for weather information by city name and provides temperature data in both Celsius and Fahrenheit.
+Live preview:https://raze0017.github.io/WeatherApp/
 
 ## Table of Contents
 
